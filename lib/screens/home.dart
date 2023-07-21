@@ -135,7 +135,8 @@ class _HomeScreenState extends State<HomeScreen>
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (_) => const DetailScreen()));
+                            builder: (_) =>
+                                DetailScreen(plant: plants[index])));
                   },
                   fillColor: Colors.black,
                   shape: const CircleBorder(),
@@ -153,7 +154,9 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
         body: AnnotatedRegion(
-      value: SystemUiOverlayStyle(statusBarIconBrightness: Brightness.dark),
+      value: const SystemUiOverlayStyle(
+          statusBarIconBrightness: Brightness.dark,
+          statusBarColor: Colors.transparent),
       child: ListView(
         children: [
           Padding(
