@@ -46,6 +46,11 @@ class _HomeScreenState extends State<HomeScreen>
             value = (1 - (value.abs() * 0.3)).clamp(0, 1);
             //print(value);
             //print(_pageController.page);
+          } else {
+            if (index == 0)
+              value = 1;
+            else
+              value = 0.7;
           }
           return Center(
             child: Container(
